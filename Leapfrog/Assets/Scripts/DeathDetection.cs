@@ -1,11 +1,13 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class DeathDetection : MonoBehaviour
 {
     public CameraFollow CameraFollowObject;
     private Jumping PlayerJumping;
     private SpriteRenderer PlayerRenderer;
+    public Light2D LightObject;
 
     private void Start()
     {
@@ -21,6 +23,10 @@ public class DeathDetection : MonoBehaviour
             CameraFollowObject.FollowY = false;
             Destroy(PlayerJumping);
             Destroy(PlayerRenderer);
+            if(LightObject != null)
+            {
+                LightObject.intensity = 0;
+            }
         }
     }
 }
