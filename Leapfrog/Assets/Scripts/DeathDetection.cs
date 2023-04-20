@@ -4,6 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 public class DeathDetection : MonoBehaviour
 {
+    public PlayerDeath DeathScript;
     public CameraFollow CameraFollowObject;
     private Jumping PlayerJumping;
     private SpriteRenderer PlayerRenderer;
@@ -19,6 +20,8 @@ public class DeathDetection : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Debug.Log("Dead");
+            DeathScript.Die();
+            /*
             CameraFollowObject.FollowX = false;
             CameraFollowObject.FollowY = false;
             Destroy(PlayerJumping);
@@ -27,6 +30,7 @@ public class DeathDetection : MonoBehaviour
             {
                 LightObject.intensity = 0;
             }
+            */
         }
     }
 }
