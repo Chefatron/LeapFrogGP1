@@ -88,26 +88,29 @@ public class BirdManager : MonoBehaviour
             }
         }
 
-        if (upBirdPhys.position.y < (playerPhys.position.x - 15))
+        if (attackActive == true)
         {
-            upBirdTransform.position = new Vector2(1, (playerTransform.position.y + 15));
-            leftBird.SetActive(true);
-            rightBird.SetActive(true);
-            attackActive = false;
-        }
-        else if (leftBirdPhys.position.x > 25)
-        {
-            leftBirdTransform.position = new Vector2(-19, playerTransform.position.y);
-            upBird.SetActive(true);
-            rightBird.SetActive(true);
-            attackActive = false;
-        }
-        else if (rightBirdPhys.position.x < -15)
-        {
-            rightBirdTransform.position = new Vector2(21, playerTransform.position.y);
-            upBird.SetActive(true);
-            leftBird.SetActive(true);
-            attackActive = false;
+            if (upBirdPhys.position.y < (playerPhys.position.x - 15))
+            {
+                upBirdTransform.position = new Vector2(1, (playerTransform.position.y + 15));
+                leftBird.SetActive(true);
+                rightBird.SetActive(true);
+                attackActive = false;
+            }
+            else if (leftBirdPhys.position.x > 25)
+            {
+                leftBirdTransform.position = new Vector2(-19, playerTransform.position.y);
+                upBird.SetActive(true);
+                rightBird.SetActive(true);
+                attackActive = false;
+            }
+            else if (rightBirdPhys.position.x < -15)
+            {
+                rightBirdTransform.position = new Vector2(21, playerTransform.position.y);
+                upBird.SetActive(true);
+                leftBird.SetActive(true);
+                attackActive = false;
+            }
         }
     }
 }
