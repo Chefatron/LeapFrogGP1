@@ -1239,6 +1239,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpawners
       objectReference: {fileID: 0}
+    - target: {fileID: 5719699360107597402, guid: a1ec9cb7ac7c00c4a94534a290abfa87, type: 3}
+      propertyPath: Platforms.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719699360107597402, guid: a1ec9cb7ac7c00c4a94534a290abfa87, type: 3}
+      propertyPath: Platforms.Array.data[1]
+      value: 
+      objectReference: {fileID: 7472983748310078448, guid: 614e0997e01f12843a92985fddb506e7, type: 3}
     - target: {fileID: 5719699361242424304, guid: a1ec9cb7ac7c00c4a94534a290abfa87, type: 3}
       propertyPath: CameraFollowObject
       value: 
