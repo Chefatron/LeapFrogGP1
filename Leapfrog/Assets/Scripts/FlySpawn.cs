@@ -11,7 +11,7 @@ public class FlySpawn : MonoBehaviour
     {
         SpawnPoint = transform.GetChild(0).transform;
         int RandomNum = Mathf.RoundToInt(Random.Range(1, SpawnChance));
-        if(RandomNum == 1 && Fly != null)
+        if (RandomNum == 1 && Fly != null)
         {
             Instantiate(Fly, SpawnPoint.position, SpawnPoint.rotation);
         }
