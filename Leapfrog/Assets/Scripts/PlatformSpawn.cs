@@ -6,6 +6,7 @@ public class PlatformSpawn : MonoBehaviour
     private GameManager Manager;
     public List<Transform> HorizontalPlatformSpawners;
     public List<GameObject> Platforms;
+    public List<GameObject> SidePlatforms;
 
     void Start()
     {
@@ -16,9 +17,18 @@ public class PlatformSpawn : MonoBehaviour
     {
         for (int i = 0; i < _Wall.VerticalPlatformSpawners.Count; i++)
         {
-            int RandomNum = Random.Range(0,HorizontalPlatformSpawners.Count);
-            int RandomPlatform = Random.Range(0, Platforms.Count);
-            Spawn(Platforms[RandomPlatform], HorizontalPlatformSpawners[RandomNum].position.x, _Wall.VerticalPlatformSpawners[i].position.y);
+            int RandomPos = Random.Range(0,HorizontalPlatformSpawners.Count);
+            
+            if(RandomPos == 0 || RandomPos == HorizontalPlatformSpawners.Count - 1)
+            {
+                int RandomPlatform = Random.Range(0, SidePlatforms.Count);
+                Spawn(SidePlatforms[RandomPlatform], HorizontalPlatformSpawners[RandomPos].position.x, _Wall.VerticalPlatformSpawners[i].position.y);
+            }
+            else
+            {
+                int RandomPlatform = Random.Range(0, Platforms.Count);
+                Spawn(Platforms[RandomPlatform], HorizontalPlatformSpawners[RandomPos].position.x, _Wall.VerticalPlatformSpawners[i].position.y);
+            }
         }
     }
 
