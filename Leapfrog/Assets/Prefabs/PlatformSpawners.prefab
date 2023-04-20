@@ -67,7 +67,8 @@ MonoBehaviour:
   - {fileID: 5719699361583693294}
   - {fileID: 5719699362158520446}
   - {fileID: 5719699361616494623}
-  BasicPlatform: {fileID: 2435031587160426752, guid: b61d0084229c937409549245afee066b, type: 3}
+  Platforms:
+  - {fileID: 2435031587160426752, guid: b61d0084229c937409549245afee066b, type: 3}
 --- !u!1 &5719699361242424311
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ccc757a968af947b3966a1d3f769f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathScript: {fileID: 0}
   CameraFollowObject: {fileID: 0}
   LightObject: {fileID: 0}
 --- !u!1 &5719699361418526916

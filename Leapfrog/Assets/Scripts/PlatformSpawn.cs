@@ -5,7 +5,7 @@ public class PlatformSpawn : MonoBehaviour
 {
     private GameManager Manager;
     public List<Transform> HorizontalPlatformSpawners;
-    public GameObject BasicPlatform;
+    public List<GameObject> Platforms;
 
     void Start()
     {
@@ -17,7 +17,8 @@ public class PlatformSpawn : MonoBehaviour
         for (int i = 0; i < _Wall.VerticalPlatformSpawners.Count; i++)
         {
             int RandomNum = Random.Range(0,HorizontalPlatformSpawners.Count);
-            Spawn(BasicPlatform, HorizontalPlatformSpawners[RandomNum].position.x, _Wall.VerticalPlatformSpawners[i].position.y);
+            int RandomPlatform = Random.Range(0, Platforms.Count);
+            Spawn(Platforms[RandomPlatform], HorizontalPlatformSpawners[RandomNum].position.x, _Wall.VerticalPlatformSpawners[i].position.y);
         }
     }
 
