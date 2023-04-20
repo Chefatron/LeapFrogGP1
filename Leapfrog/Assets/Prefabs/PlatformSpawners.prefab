@@ -68,6 +68,8 @@ MonoBehaviour:
   - {fileID: 5719699362158520446}
   - {fileID: 5719699361616494623}
   Platforms:
+  - {fileID: 5927789635795276818, guid: 044628f558ec2db4fa0cd3d9eaee4436, type: 3}
+  SidePlatforms:
   - {fileID: 2435031587160426752, guid: b61d0084229c937409549245afee066b, type: 3}
 --- !u!1 &5719699361242424311
 GameObject:
