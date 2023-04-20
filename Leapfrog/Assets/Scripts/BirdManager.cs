@@ -8,32 +8,27 @@ public class BirdManager : MonoBehaviour
     private int attack;
     private bool attackActive = false;
     public int attackDecide;
-    public int attackChance;
-    public GameObject upBird;
-    public GameObject leftBird;
-    public GameObject rightBird;
-    public GameObject player;
+    [Min(2)]public int attackChance;
     private Rigidbody2D upBirdPhys;
     private Rigidbody2D leftBirdPhys;
     private Rigidbody2D rightBirdPhys;
-    private Rigidbody2D playerPhys;
     private Transform upBirdTransform;
     private Transform leftBirdTransform;
     private Transform rightBirdTransform;
     private Transform playerTransform;
+    private BoxCollider2D playerCollider;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        upBirdPhys = upBird.GetComponent<Rigidbody2D>();
-        leftBirdPhys = leftBird.GetComponent<Rigidbody2D>();
-        rightBirdPhys = rightBird.GetComponent<Rigidbody2D>();
-        playerPhys = player.GetComponent<Rigidbody2D>();
-        upBirdTransform = upBirdPhys.transform;
-        leftBirdTransform = leftBirdPhys.transform;
-        rightBirdTransform = rightBirdPhys.transform;
-        playerTransform = player.transform;
+        upBirdPhys = GameObject.Find("Upbird").GetComponent<Rigidbody2D>();
+        leftBirdPhys = GameObject.Find("Leftbird").GetComponent<Rigidbody2D>();
+        rightBirdPhys = GameObject.Find("Rightbird").GetComponent<Rigidbody2D>();
+        upBirdTransform = GameObject.Find("Upbird").GetComponent<Transform>();
+        leftBirdTransform = GameObject.Find("Leftbird").GetComponent<Transform>();
+        rightBirdTransform = GameObject.Find("Rightbird").GetComponent<Transform>();
+        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -49,7 +44,7 @@ public class BirdManager : MonoBehaviour
             // Random generated number to see if an attack should go ahead
             attackDecide = Random.Range(1, attackChance);
 
-            if (attackDecide == 300)
+            if (attackDecide == 1)
             {
                 // Random number to see what attack to do
                 attack = Random.Range(1, 4);
@@ -67,50 +62,51 @@ public class BirdManager : MonoBehaviour
                         upBirdTransform.position = new Vector2(6, (playerTransform.position.y + 15));
                     }
                     upBirdPhys.velocity = new Vector2(0, -10);
-                    leftBird.SetActive(false);
-                    rightBird.SetActive(false);
+                    leftBirdTransform.gameObject.SetActive(false);
+                    rightBirdTransform.gameObject.SetActive(false);
                     attackActive = true;
                 }
                 else if (attack == 2)
                 {
                     leftBirdPhys.velocity = new Vector2(10, 0);
-                    upBird.SetActive(false);
-                    rightBird.SetActive(false);
+                    upBirdTransform.gameObject.SetActive(false);
+                    rightBirdTransform.gameObject.SetActive(false);
                     attackActive = true;
                 }
                 else if (attack == 3)
                 {
                     rightBirdPhys.velocity = new Vector2(-10, 0);
-                    upBird.SetActive(false);
-                    leftBird.SetActive(false);
+                    upBirdTransform.gameObject.SetActive(false);
+                    leftBirdTransform.gameObject.SetActive(false);
                     attackActive = true;
                 }
             }
         }
-
-        if (attackActive == true)
+        else if (attackActive == true)
         {
-            if (upBirdPhys.position.y < (playerPhys.position.x - 15))
+            if (upBirdPhys.position.y < (playerTransform.position.x - 15))
             {
                 upBirdTransform.position = new Vector2(1, (playerTransform.position.y + 15));
-                leftBird.SetActive(true);
-                rightBird.SetActive(true);
+                leftBirdTransform.gameObject.SetActive(true);
+                rightBirdTransform.gameObject.SetActive(true);
                 attackActive = false;
             }
             else if (leftBirdPhys.position.x > 25)
             {
                 leftBirdTransform.position = new Vector2(-19, playerTransform.position.y);
-                upBird.SetActive(true);
-                rightBird.SetActive(true);
+                upBirdTransform.gameObject.SetActive(true);
+                rightBirdTransform.gameObject.SetActive(true);
                 attackActive = false;
             }
             else if (rightBirdPhys.position.x < -15)
             {
                 rightBirdTransform.position = new Vector2(21, playerTransform.position.y);
-                upBird.SetActive(true);
-                leftBird.SetActive(true);
+                upBirdTransform.gameObject.SetActive(true);
+                leftBirdTransform.gameObject.SetActive(true);
                 attackActive = false;
             }
+
+            
         }
     }
 }
