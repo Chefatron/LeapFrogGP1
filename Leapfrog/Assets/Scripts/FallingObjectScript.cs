@@ -1,28 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class FallingObjectScript : MonoBehaviour
 {
-    private int DropPositon;
     private int DropDecide;
     private bool DropActive;
-    [Min(2)]public int DropChance;
     private Rigidbody2D OBJrb;
     private Transform OBJtransform;
     private Transform playerTransform;
-    public PlayerDeath deathscript; 
+    [Min(2)]public int DropChance;
+    public float FollowDistanceOffset = 15f;
+    public float DropSpeed = 15f;
+    public PlayerDeath deathscript;
+    private GameObject Warning;
 
     // Start is called before the first frame update
     void Start()
     {
+        Warning = transform.GetChild(0).gameObject;
+        Warning.SetActive(true);
         OBJrb = GetComponent<Rigidbody2D>();
         OBJtransform = GetComponent<Transform>();
        //Finds player in the scene, chooses the first player it runs into
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-
-
     }
 
     // Update is called once per frame
@@ -31,12 +30,14 @@ public class FallingObjectScript : MonoBehaviour
         //Obj follows the player on the x and y axis 
         if (DropActive == false)
         {
-            OBJtransform.position = new Vector2(playerTransform.position.x, (playerTransform.position.y + 15));
+            OBJtransform.position = new Vector2(playerTransform.position.x, (playerTransform.position.y + FollowDistanceOffset));
             DropDecide = Random.Range(1, DropChance);
+            Warning.SetActive(false);
             //random number generator
             if (DropDecide == 1)
             {
-                OBJrb.velocity = new Vector2(0, -15);
+                Warning.SetActive(true);
+                OBJrb.velocity = new Vector2(0, -DropSpeed);
                 DropActive = true;
             }
         }
@@ -44,7 +45,7 @@ public class FallingObjectScript : MonoBehaviour
         {
             if (OBJtransform.position.y< (playerTransform.position.y- 15)) 
             {
-                OBJtransform.position = new Vector2(playerTransform.position.x, (playerTransform.position.y + 15));
+                OBJtransform.position = new Vector2(playerTransform.position.x, (playerTransform.position.y + FollowDistanceOffset));
                 DropActive = false;
             }
         }
@@ -55,8 +56,6 @@ public class FallingObjectScript : MonoBehaviour
         {
             deathscript.Die();
         }
-        
-        
     }
 }
 
