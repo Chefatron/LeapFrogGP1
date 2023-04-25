@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class BirdManager : MonoBehaviour
@@ -9,6 +6,9 @@ public class BirdManager : MonoBehaviour
     private bool attackActive = false;
     private int attackDecide;
     [Min(2)]public int attackChance;
+    public int FollowDistanceOffset;
+    public GameObject LeftWarning;
+    public GameObject RightWarning;
     private Rigidbody2D upBirdPhys;
     private Rigidbody2D leftBirdPhys;
     private Rigidbody2D rightBirdPhys;
@@ -22,6 +22,8 @@ public class BirdManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LeftWarning.SetActive(false);
+        RightWarning.SetActive(false);
         upBirdPhys = GameObject.Find("Upbird").GetComponent<Rigidbody2D>();
         leftBirdPhys = GameObject.Find("Leftbird").GetComponent<Rigidbody2D>();
         rightBirdPhys = GameObject.Find("Rightbird").GetComponent<Rigidbody2D>();
@@ -37,7 +39,7 @@ public class BirdManager : MonoBehaviour
         // Checks if an attack is currently already happening
         if (attackActive == false)
         {
-            upBirdTransform.position = new Vector2(1, (playerTransform.position.y + 15));
+            upBirdTransform.position = new Vector2(1, (playerTransform.position.y + FollowDistanceOffset));
             leftBirdTransform.position = new Vector2(-19, playerTransform.position.y);
             rightBirdTransform.position = new Vector2(21, playerTransform.position.y);
 
@@ -55,11 +57,11 @@ public class BirdManager : MonoBehaviour
                     attack = Random.Range(1, 3);
                     if (attack == 1)
                     {
-                        upBirdTransform.position = new Vector2(-4, (playerTransform.position.y + 15));
+                        upBirdTransform.position = new Vector2(-4, (playerTransform.position.y + FollowDistanceOffset));
                     }
                     else if (attack == 2)
                     {
-                        upBirdTransform.position = new Vector2(6, (playerTransform.position.y + 15));
+                        upBirdTransform.position = new Vector2(6, (playerTransform.position.y + FollowDistanceOffset));
                     }
                     upBirdPhys.velocity = new Vector2(0, -10);
                     leftBirdTransform.gameObject.SetActive(false);
@@ -68,6 +70,7 @@ public class BirdManager : MonoBehaviour
                 }
                 else if (attack == 2)
                 {
+                    LeftWarning.SetActive(true);
                     leftBirdPhys.velocity = new Vector2(10, 0);
                     upBirdTransform.gameObject.SetActive(false);
                     rightBirdTransform.gameObject.SetActive(false);
@@ -75,6 +78,7 @@ public class BirdManager : MonoBehaviour
                 }
                 else if (attack == 3)
                 {
+                    RightWarning.SetActive(true);
                     rightBirdPhys.velocity = new Vector2(-10, 0);
                     upBirdTransform.gameObject.SetActive(false);
                     leftBirdTransform.gameObject.SetActive(false);
@@ -84,15 +88,16 @@ public class BirdManager : MonoBehaviour
         }
         else if (attackActive == true)
         {
-            if (upBirdPhys.position.y < (playerTransform.position.x - 15))
+            if (upBirdPhys.position.y < (playerTransform.position.x - FollowDistanceOffset))
             {
-                upBirdTransform.position = new Vector2(1, (playerTransform.position.y + 15));
+                upBirdTransform.position = new Vector2(1, (playerTransform.position.y + FollowDistanceOffset));
                 leftBirdTransform.gameObject.SetActive(true);
                 rightBirdTransform.gameObject.SetActive(true);
                 attackActive = false;
             }
             else if (leftBirdPhys.position.x > 25)
             {
+                LeftWarning.SetActive(false);
                 leftBirdTransform.position = new Vector2(-19, playerTransform.position.y);
                 upBirdTransform.gameObject.SetActive(true);
                 rightBirdTransform.gameObject.SetActive(true);
@@ -100,6 +105,7 @@ public class BirdManager : MonoBehaviour
             }
             else if (rightBirdPhys.position.x < -15)
             {
+                RightWarning.SetActive(false);
                 rightBirdTransform.position = new Vector2(21, playerTransform.position.y);
                 upBirdTransform.gameObject.SetActive(true);
                 leftBirdTransform.gameObject.SetActive(true);
