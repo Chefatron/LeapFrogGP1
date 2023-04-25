@@ -7,7 +7,7 @@ public class BirdManager : MonoBehaviour
 {
     private int attack;
     private bool attackActive = false;
-    public int attackDecide;
+    private int attackDecide;
     [Min(2)]public int attackChance;
     private Rigidbody2D upBirdPhys;
     private Rigidbody2D leftBirdPhys;
