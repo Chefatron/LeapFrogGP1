@@ -1176,7 +1176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 794165395868273179, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2373301742228678642, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1198,6 +1198,10 @@ PrefabInstance:
       propertyPath: DeathScript
       value: 
       objectReference: {fileID: 310419816}
+    - target: {fileID: 3992657443068304145, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
+      propertyPath: attackChance
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8163934482488532119, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
       propertyPath: m_RootOrder
       value: 12
