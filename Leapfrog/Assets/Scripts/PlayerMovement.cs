@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float MoveSpeed;
     private Vector2 DesiredMoveSpeed;
     private bool Grounded;
+    private GameObject FollowObject;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +26,13 @@ public class PlayerMovement : MonoBehaviour
             if(Input.touchCount > 0)
             {
                 Touch touch = Input.GetTouch(0);
-                if(touch.position.x > Camera.main.transform.position.x)
+                Vector3 touchpoint = Camera.main.ScreenToWorldPoint(touch.position);
+                if(touchpoint.x > 0)
                 {
                     DesiredMoveSpeed = new Vector2(MoveSpeed, rb.velocity.y);
                     rb.velocity = DesiredMoveSpeed;
                 }
-                if (touch.position.x > Camera.main.transform.position.x)
+                if (touchpoint.x < 0)
                 {
                     DesiredMoveSpeed = new Vector2(-MoveSpeed, rb.velocity.y);
                     rb.velocity = DesiredMoveSpeed;

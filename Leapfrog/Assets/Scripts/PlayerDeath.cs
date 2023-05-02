@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -22,5 +23,6 @@ public class PlayerDeath : MonoBehaviour
         {
             transform.Find("PlayerLight").GetComponent<Light2D>().intensity = 0;
         }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
