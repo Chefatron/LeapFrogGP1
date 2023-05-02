@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625575542206520395}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.05, y: 12.17, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -151,7 +151,6 @@ MonoBehaviour:
   FollowDistanceOffset: 15
   DropSpeed: 15
   deathscript: {fileID: 0}
-  Warning: {fileID: 0}
 --- !u!1 &2197185674646943109
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8370499731785785431
 Transform:
   m_ObjectHideFlags: 0
@@ -178,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 2197185674646943109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 80, z: 1}
+  m_LocalScale: {x: 1, y: 120, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 625575542206520397}
