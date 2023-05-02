@@ -22,6 +22,21 @@ public class PlayerMovement : MonoBehaviour
         Grounded = ground.GetGrounded();
         if(!Grounded)
         {
+            if(Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                if(touch.position.x > Camera.main.transform.position.x)
+                {
+                    DesiredMoveSpeed = new Vector2(MoveSpeed, rb.velocity.y);
+                    rb.velocity = DesiredMoveSpeed;
+                }
+                if (touch.position.x > Camera.main.transform.position.x)
+                {
+                    DesiredMoveSpeed = new Vector2(-MoveSpeed, rb.velocity.y);
+                    rb.velocity = DesiredMoveSpeed;
+                }
+            }
+
             if(Input.GetAxisRaw("Horizontal") > 0)
             {
                 DesiredMoveSpeed = new Vector2(MoveSpeed, rb.velocity.y);

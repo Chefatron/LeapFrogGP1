@@ -9,6 +9,7 @@ public class BirdManager : MonoBehaviour
     public int FollowDistanceOffset;
     public GameObject LeftWarning;
     public GameObject RightWarning;
+    public GameObject UpWarning;
     private Rigidbody2D upBirdPhys;
     private Rigidbody2D leftBirdPhys;
     private Rigidbody2D rightBirdPhys;
@@ -24,6 +25,7 @@ public class BirdManager : MonoBehaviour
     {
         LeftWarning.SetActive(false);
         RightWarning.SetActive(false);
+        UpWarning.SetActive(false);
         upBirdPhys = GameObject.Find("Upbird").GetComponent<Rigidbody2D>();
         leftBirdPhys = GameObject.Find("Leftbird").GetComponent<Rigidbody2D>();
         rightBirdPhys = GameObject.Find("Rightbird").GetComponent<Rigidbody2D>();
@@ -53,6 +55,7 @@ public class BirdManager : MonoBehaviour
 
                 if (attack == 1)
                 {
+                    UpWarning.SetActive(true);
                     // Random number to see what side up bird should attack from
                     attack = Random.Range(1, 3);
                     if (attack == 1)
@@ -90,6 +93,7 @@ public class BirdManager : MonoBehaviour
         {
             if (upBirdPhys.position.y < (playerTransform.position.x - FollowDistanceOffset))
             {
+                UpWarning.SetActive(false);
                 upBirdTransform.position = new Vector2(1, (playerTransform.position.y + FollowDistanceOffset));
                 leftBirdTransform.gameObject.SetActive(true);
                 rightBirdTransform.gameObject.SetActive(true);
