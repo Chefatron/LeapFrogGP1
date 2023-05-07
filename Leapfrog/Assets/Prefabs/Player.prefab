@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4547681073154181633}
   - component: {fileID: 4547681073154181634}
   - component: {fileID: 5261720683942981740}
+  - component: {fileID: -2298421744783442299}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 6
+  audioPlayer: {fileID: 0}
 --- !u!114 &4547681073154181633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +190,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a122162dd1604164789377d368c425dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2298421744783442299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547681073154181643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9045eed0b8a214682739c401103f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrogAudioClip: {fileID: 8300000, guid: e7a63074967fc0b42965987b1417ef68, type: 3}
+  interval: 7

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(GroundCheck))]
@@ -9,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 DesiredMoveSpeed;
     private bool Grounded;
     private GameObject FollowObject;
+    public AudioSource audioPlayer; 
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +51,17 @@ public class PlayerMovement : MonoBehaviour
                 DesiredMoveSpeed = new Vector2(-MoveSpeed, rb.velocity.y);
                 rb.velocity = DesiredMoveSpeed;
             }
+             
         }
     }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "CollisionTag") {
+            audioPlayer.Play();
+        }
+        
+    }
 }
+
+
