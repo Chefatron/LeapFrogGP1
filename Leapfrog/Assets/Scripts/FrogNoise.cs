@@ -13,7 +13,6 @@ public class FrogNoise : MonoBehaviour
     void Start()
     {
         FrogAudioSource = GameObject.Find("FrogAudio").GetComponent<AudioSource>();
-       //nvokeRepeating("PlayFrogNoise", interval, interval);
     }
 
     private void Update()

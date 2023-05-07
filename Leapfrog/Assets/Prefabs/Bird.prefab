@@ -52,6 +52,8 @@ MonoBehaviour:
   LeftWarning: {fileID: 4146004256599268904}
   RightWarning: {fileID: 1158002675703584248}
   UpWarning: {fileID: 2944643830102061126}
+  BirdAudioClip: {fileID: 8300000, guid: 9c685d081a349054e889a7326f08b36f, type: 3}
+  BirdAudioSource: {fileID: 0}
 --- !u!1 &1158002675703584248
 GameObject:
   m_ObjectHideFlags: 0
