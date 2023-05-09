@@ -23,6 +23,7 @@ public class PlayerDeath : MonoBehaviour
         {
             transform.Find("PlayerLight").GetComponent<Light2D>().intensity = 0;
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.SetInt("PreviousLevel", SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(4);
     }
 }
