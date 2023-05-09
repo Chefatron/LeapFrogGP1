@@ -363,7 +363,7 @@ MonoBehaviour:
   StartRadius: 8
   MaxRadius: 10
   MinRadius: 1
-  SizeDecreaseRate: 0.6
+  SizeDecreaseRate: 0.3
 --- !u!1001 &117078248
 PrefabInstance:
   m_ObjectHideFlags: 0
