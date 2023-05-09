@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5891444713876346985}
   - component: {fileID: 6974717907761764188}
   - component: {fileID: 7311961437807315513}
+  - component: {fileID: 724406246922578234}
   m_Layer: 0
   m_Name: SidePlatform_light
   m_TagString: Untagged
@@ -161,6 +162,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnChance: 3
   Fly: {fileID: 11335969492880210, guid: ff1105c5d48fc0848a4ac79b868b0338, type: 3}
+--- !u!114 &724406246922578234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435031587160426752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36077205b27d24145acefeb28cbb86fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5203730956502862315
 GameObject:
   m_ObjectHideFlags: 0

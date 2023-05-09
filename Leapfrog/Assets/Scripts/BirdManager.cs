@@ -96,7 +96,7 @@ public class BirdManager : MonoBehaviour
         }
         else if (attackActive == true)
         {
-            if (upBirdPhys.position.y < (playerTransform.position.x - FollowDistanceOffset))
+            if (upBirdPhys.position.y < (playerTransform.position.y - 15))
             {
                 UpWarning.SetActive(false);
                 upBirdTransform.position = new Vector2(1, (playerTransform.position.y + FollowDistanceOffset));
@@ -119,20 +119,7 @@ public class BirdManager : MonoBehaviour
                 upBirdTransform.gameObject.SetActive(true);
                 leftBirdTransform.gameObject.SetActive(true);
                 attackActive = false;
-                {
-                    if (attackActive == true)
-                    {
-                        BirdAudioSource.Play();
-                    }
-                    else if (attackActive == false)
-                    {
-                        BirdAudioSource.Stop();
-                    }
-                }
-
             }
-
-            
         }
 
     }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8037871783719081223}
   - component: {fileID: 6207171087316279401}
   - component: {fileID: 3406834306278619017}
-  - component: {fileID: 839814386697763714}
   - component: {fileID: 215310710509335825}
   - component: {fileID: 5723237801245925110}
   m_Layer: 0
@@ -149,20 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyDist: 40
---- !u!114 &839814386697763714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275429799587733925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff66e0ab953b4a469af56aff669a7c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnChance: 2
-  Fly: {fileID: 11335969492880210, guid: ff1105c5d48fc0848a4ac79b868b0338, type: 3}
 --- !u!114 &215310710509335825
 MonoBehaviour:
   m_ObjectHideFlags: 0
