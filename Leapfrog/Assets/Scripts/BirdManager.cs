@@ -1,4 +1,6 @@
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class BirdManager : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class BirdManager : MonoBehaviour
     public int FollowDistanceOffset;
     public GameObject LeftWarning;
     public GameObject RightWarning;
+    public GameObject UpWarning;
     private Rigidbody2D upBirdPhys;
     private Rigidbody2D leftBirdPhys;
     private Rigidbody2D rightBirdPhys;
@@ -17,6 +20,8 @@ public class BirdManager : MonoBehaviour
     private Transform rightBirdTransform;
     private Transform playerTransform;
     private BoxCollider2D playerCollider;
+    public AudioClip BirdAudioClip;
+    public AudioSource BirdAudioSource;
 
 
     // Start is called before the first frame update
@@ -24,6 +29,7 @@ public class BirdManager : MonoBehaviour
     {
         LeftWarning.SetActive(false);
         RightWarning.SetActive(false);
+        UpWarning.SetActive(false);
         upBirdPhys = GameObject.Find("Upbird").GetComponent<Rigidbody2D>();
         leftBirdPhys = GameObject.Find("Leftbird").GetComponent<Rigidbody2D>();
         rightBirdPhys = GameObject.Find("Rightbird").GetComponent<Rigidbody2D>();
@@ -31,6 +37,7 @@ public class BirdManager : MonoBehaviour
         leftBirdTransform = GameObject.Find("Leftbird").GetComponent<Transform>();
         rightBirdTransform = GameObject.Find("Rightbird").GetComponent<Transform>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        BirdAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,6 +60,7 @@ public class BirdManager : MonoBehaviour
 
                 if (attack == 1)
                 {
+                    UpWarning.SetActive(true);
                     // Random number to see what side up bird should attack from
                     attack = Random.Range(1, 3);
                     if (attack == 1)
@@ -90,6 +98,7 @@ public class BirdManager : MonoBehaviour
         {
             if (upBirdPhys.position.y < (playerTransform.position.x - FollowDistanceOffset))
             {
+                UpWarning.SetActive(false);
                 upBirdTransform.position = new Vector2(1, (playerTransform.position.y + FollowDistanceOffset));
                 leftBirdTransform.gameObject.SetActive(true);
                 rightBirdTransform.gameObject.SetActive(true);
@@ -110,9 +119,22 @@ public class BirdManager : MonoBehaviour
                 upBirdTransform.gameObject.SetActive(true);
                 leftBirdTransform.gameObject.SetActive(true);
                 attackActive = false;
+                {
+                    if (attackActive == true)
+                    {
+                        BirdAudioSource.Play();
+                    }
+                    else if (attackActive == false)
+                    {
+                        BirdAudioSource.Stop();
+                    }
+                }
+
             }
 
             
         }
+
     }
 }
+
