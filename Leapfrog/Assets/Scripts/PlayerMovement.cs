@@ -8,12 +8,20 @@ public class PlayerMovement : MonoBehaviour
     public float MoveSpeed;
     private Vector2 DesiredMoveSpeed;
     private bool Grounded;
+<<<<<<< Updated upstream
+=======
+    private GameObject FollowObject;
+    public AudioSource audioPlayer;
+
+    private Animator anim;
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         ground = GetComponent<GroundCheck>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,11 +34,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 DesiredMoveSpeed = new Vector2(MoveSpeed, rb.velocity.y);
                 rb.velocity = DesiredMoveSpeed;
+
+                anim.SetBool("isMoving", true);
             }
             else if (Input.GetAxisRaw("Horizontal") < 0)
             {
                 DesiredMoveSpeed = new Vector2(-MoveSpeed, rb.velocity.y);
                 rb.velocity = DesiredMoveSpeed;
+
+                anim.SetBool("isMoving", true);
+            }
+            else
+            {
+                anim.SetBool("isMoving", false);
             }
         }
     }

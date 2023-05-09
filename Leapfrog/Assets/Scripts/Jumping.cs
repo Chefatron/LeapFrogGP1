@@ -12,6 +12,8 @@ public class Jumping : MonoBehaviour
     public float JumpForce = 10f;
     public float JumpDelay = 0.2f;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class Jumping : MonoBehaviour
     {
         Grounded = ground.GetGrounded();
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (rb.velocity.y <= 0)
@@ -35,6 +38,7 @@ public class Jumping : MonoBehaviour
     public IEnumerator Jump(float _JumpForce)
     {
         yield return new WaitForSeconds(JumpDelay);
+
         if(Grounded)
         {
             DesiredVelocity = new Vector2(rb.velocity.x, _JumpForce);
