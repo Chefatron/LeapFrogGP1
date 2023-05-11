@@ -14,7 +14,6 @@ public class PlayerDeath : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Dead");
         CameraFollowObject.FollowX = false;
         CameraFollowObject.FollowY = false;
         Destroy(GetComponent<Jumping>());

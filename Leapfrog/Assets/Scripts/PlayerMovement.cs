@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public float MoveSpeed;
     private Vector2 DesiredMoveSpeed;
     private bool Grounded;
-    private GameObject FollowObject;
     public AudioSource audioPlayer; 
 
     // Start is called before the first frame update

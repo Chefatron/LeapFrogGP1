@@ -1011,6 +1011,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2298421744783442299, guid: 93a000fdc4472c84d8d03d86173cb6e3, type: 3}
+      propertyPath: FrogAudioSource
+      value: 
+      objectReference: {fileID: 652496453}
     - target: {fileID: 4547681073154181639, guid: 93a000fdc4472c84d8d03d86173cb6e3, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1061,6 +1065,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93a000fdc4472c84d8d03d86173cb6e3, type: 3}
+--- !u!1001 &652496452
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.41303945
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5643067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5030192
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325090461688533149, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329353141456534272, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+      propertyPath: m_Name
+      value: SoundEffectSources
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+--- !u!82 &652496453 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 296626013343543785, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+  m_PrefabInstance: {fileID: 652496452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &652496454 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 296626014949933689, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+  m_PrefabInstance: {fileID: 652496452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &664979506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1905,7 +1976,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1379552070
 PrefabInstance:
@@ -1934,6 +2005,10 @@ PrefabInstance:
       propertyPath: attackChance
       value: 501
       objectReference: {fileID: 0}
+    - target: {fileID: 3992657443068304145, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
+      propertyPath: BirdAudioSource
+      value: 
+      objectReference: {fileID: 652496454}
     - target: {fileID: 3992657443068304145, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
       propertyPath: FollowDistanceOffset
       value: 40
