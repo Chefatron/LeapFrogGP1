@@ -1,6 +1,3 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FrogNoise : MonoBehaviour
@@ -9,10 +6,11 @@ public class FrogNoise : MonoBehaviour
     public float interval = 5f;
     public AudioSource FrogAudioSource;
     private float CurrentNoiseTime = 0f;
+    bool attackActive;
     
     void Start()
     {
-        FrogAudioSource = GameObject.Find("FrogAudio").GetComponent<AudioSource>();
+        FrogAudioSource = GameObject.Find("FrogAudio").GetComponent<AudioSource>();       
     }
 
     private void Update()

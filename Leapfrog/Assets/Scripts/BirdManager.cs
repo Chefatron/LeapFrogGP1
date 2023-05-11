@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -19,9 +18,7 @@ public class BirdManager : MonoBehaviour
     private Transform leftBirdTransform;
     private Transform rightBirdTransform;
     private Transform playerTransform;
-    private BoxCollider2D playerCollider;
-    public AudioClip BirdAudioClip;
-    public AudioSource BirdAudioSource;
+    private AudioSource BirdAudioSource;
 
 
     // Start is called before the first frame update
@@ -37,7 +34,7 @@ public class BirdManager : MonoBehaviour
         leftBirdTransform = GameObject.Find("Leftbird").GetComponent<Transform>();
         rightBirdTransform = GameObject.Find("Rightbird").GetComponent<Transform>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        BirdAudioSource = GetComponent<AudioSource>();
+        BirdAudioSource = GameObject.Find("BirdAudio").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,6 +52,9 @@ public class BirdManager : MonoBehaviour
 
             if (attackDecide == 1)
             {
+                BirdAudioSource.Play();
+                Debug.Log("KAWKAW");
+
                 // Random number to see what attack to do
                 attack = Random.Range(1, 4);
 
@@ -120,8 +120,8 @@ public class BirdManager : MonoBehaviour
                 leftBirdTransform.gameObject.SetActive(true);
                 attackActive = false;
             }
+            
         }
-
     }
 }
 
