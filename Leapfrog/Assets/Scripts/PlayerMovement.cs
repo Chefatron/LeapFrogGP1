@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(GroundCheck))]
