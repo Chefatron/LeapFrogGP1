@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spike : MonoBehaviour
 {
     private Rigidbody2D OBJrb;
     private Transform OBJtransform;
-    private Transform playerTransform;
-    public PlayerDeath deathscript;
+    private GameObject player;
+    private PlayerDeath deathscript;
 
     void Start()
     {
         OBJrb = GetComponent<Rigidbody2D>();
         OBJtransform = GetComponent<Transform>();
+        player = GameObject.FindWithTag("Player");
+        deathscript = player.GetComponent<PlayerDeath>();
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -4,6 +4,8 @@ public class CameraFollow : MonoBehaviour
 {
     public GameObject ObjectToFollow;
     private Transform FollowTransform;
+    private float HighestPoint;
+    private Transform Player;
 
     public bool FollowX;
     public bool FollowY;
@@ -13,6 +15,7 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
         FollowTransform = ObjectToFollow.transform;
+        Player = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -22,9 +25,10 @@ public class CameraFollow : MonoBehaviour
         {
             FollowTarget = new Vector2(FollowTransform.position.x,FollowTarget.y);
         }
-        if(FollowY)
+        if(FollowY && Player.transform.position.y > HighestPoint)
         {
             FollowTarget = new Vector2(FollowTarget.x, FollowTransform.position.y);
+            HighestPoint = Player.transform.position.y;
         }
         transform.position = FollowTarget;
     }

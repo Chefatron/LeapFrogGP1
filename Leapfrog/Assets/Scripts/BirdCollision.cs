@@ -15,7 +15,6 @@ public class BirdCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Dead");
             DeathScript.Die();
         }
     }
