@@ -5,6 +5,7 @@ using TMPro;
 using System.Threading;
 
 public class Tutorial_script : MonoBehaviour
+{
     private TextMeshProUGUI tutorialText;
     private int stage;
     float tutorialTimer;
