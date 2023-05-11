@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36077205b27d24145acefeb28cbb86fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AlternateFlip: 0
 --- !u!1 &8673982823069210643
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8673982823069210643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 2.3333333}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -146,7 +147,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.28880462
 --- !u!251 &8673982823069210642
 PlatformEffector2D:
   m_ObjectHideFlags: 0

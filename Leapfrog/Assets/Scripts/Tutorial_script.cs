@@ -6,6 +6,7 @@ using System.Threading;
 
 public class Tutorial_script : MonoBehaviour
 {
+    public GameObject PauseButton;
     private TextMeshProUGUI tutorialText;
     private int stage;
     float tutorialTimer;
@@ -13,15 +14,17 @@ public class Tutorial_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PauseButton.SetActive(false);
         tutorialText = GameObject.Find("TutorialText").GetComponent<TextMeshProUGUI>();
         Time.timeScale = 0.01f;
         stage = 0;
         tutorialTimer = 0.003f;
-        PlayerPrefs.SetString("TutorialCompleted", "No");
         if (PlayerPrefs.GetString("TutorialCompleted") == "Yes")
         {
             Destroy(GameObject.Find("TutorialText"));
             Destroy(GameObject.Find("SkipButton"));
+            Time.timeScale = 1;
+            PauseButton.SetActive(true);
         }
     }
 
@@ -55,6 +58,7 @@ public class Tutorial_script : MonoBehaviour
                     Time.timeScale = 1;
                     Destroy(GameObject.Find("TutorialText"));
                     Destroy(GameObject.Find("SkipButton"));
+                    PauseButton.SetActive(true);
                     break;
 
             }
@@ -68,5 +72,6 @@ public class Tutorial_script : MonoBehaviour
         Time.timeScale = 1;
         Destroy(GameObject.Find("TutorialText"));
         Destroy(GameObject.Find("SkipButton"));
+        PauseButton.SetActive(true);
     }
 }

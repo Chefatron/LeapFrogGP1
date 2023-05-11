@@ -1,19 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameOverMenu : MonoBehaviour
 {
+    public TextMeshProUGUI ScoreText;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        ScoreText.text = PlayerPrefs.GetInt("Score").ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ResetButton()
     {

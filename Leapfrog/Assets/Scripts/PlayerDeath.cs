@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
     private CameraFollow CameraFollowObject;
-    private GameObject Player;
 
     private void Start()
     {
@@ -23,6 +22,7 @@ public class PlayerDeath : MonoBehaviour
             transform.Find("PlayerLight").GetComponent<Light2D>().intensity = 0;
         }
         PlayerPrefs.SetInt("PreviousLevel", SceneManager.GetActiveScene().buildIndex);
+        GameObject.Find("ScoreManager").GetComponent<ScoreManager>().StoreScore();
         SceneManager.LoadScene(4);
     }
 }
