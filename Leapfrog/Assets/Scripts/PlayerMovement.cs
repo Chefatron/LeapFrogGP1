@@ -9,11 +9,19 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 DesiredMoveSpeed;
     private bool Grounded;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+
+>>>>>>> Stashed changes
     private GameObject FollowObject;
     public AudioSource audioPlayer;
 
     private Animator anim;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes
 
     // Start is called before the first frame update
