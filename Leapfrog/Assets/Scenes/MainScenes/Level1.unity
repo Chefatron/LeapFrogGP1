@@ -1442,6 +1442,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886377645}
   m_CullTransparentMesh: 1
+--- !u!82 &1038028045 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 296626014695824519, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+  m_PrefabInstance: {fileID: 1540496034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1158525860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2190,16 +2195,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
---- !u!82 &1540496035 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 296626013343543785, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
-  m_PrefabInstance: {fileID: 1540496034}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1540496036 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 296626014949933689, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
-  m_PrefabInstance: {fileID: 1540496034}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1546026734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2446,11 +2441,11 @@ PrefabInstance:
     - target: {fileID: -2298421744783442299, guid: 93a000fdc4472c84d8d03d86173cb6e3, type: 3}
       propertyPath: FrogAudioSource
       value: 
-      objectReference: {fileID: 1540496035}
+      objectReference: {fileID: 0}
     - target: {fileID: 4547681073154181632, guid: 93a000fdc4472c84d8d03d86173cb6e3, type: 3}
       propertyPath: audioPlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1038028045}
     - target: {fileID: 4547681073154181639, guid: 93a000fdc4472c84d8d03d86173cb6e3, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2801,7 +2796,7 @@ PrefabInstance:
     - target: {fileID: 3992657443068304145, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
       propertyPath: BirdAudioSource
       value: 
-      objectReference: {fileID: 1540496036}
+      objectReference: {fileID: 0}
     - target: {fileID: 3992657443068304145, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
       propertyPath: FollowDistanceOffset
       value: 40

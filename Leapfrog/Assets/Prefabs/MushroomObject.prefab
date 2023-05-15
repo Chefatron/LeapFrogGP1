@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5940808876532850035}
   - component: {fileID: 7261078081161883902}
+  - component: {fileID: 4527283339743550095}
+  - component: {fileID: -5271971764839038152}
   m_Layer: 0
   m_Name: MushroomObject
-  m_TagString: Untagged
+  m_TagString: CollisionTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +47,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36077205b27d24145acefeb28cbb86fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AlternateFlip: 0
+--- !u!58 &4527283339743550095
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8161431468479537644}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: afd03398968dff846ac1e8688325f96d, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!251 &-5271971764839038152
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8161431468479537644}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &8673982823069210643
 GameObject:
   m_ObjectHideFlags: 0
