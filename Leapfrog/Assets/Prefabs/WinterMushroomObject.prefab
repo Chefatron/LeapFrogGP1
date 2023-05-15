@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &253776643789109897
+--- !u!1 &4931467429335182294
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 253776643789109893}
-  - component: {fileID: 253776643789109898}
-  - component: {fileID: 253776643789109899}
-  - component: {fileID: 253776643789109896}
+  - component: {fileID: 4931467429335182298}
+  - component: {fileID: 4931467429335182293}
+  - component: {fileID: 4931467429335182292}
+  - component: {fileID: 4931467429335182295}
   m_Layer: 0
   m_Name: 'Mushroom '
-  m_TagString: Untagged
+  m_TagString: CollisionTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &253776643789109893
+--- !u!4 &4931467429335182298
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253776643789109897}
+  m_GameObject: {fileID: 4931467429335182294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 2.3333333}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2996103053419757545}
+  m_Father: {fileID: 7953854086719581878}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &253776643789109898
+--- !u!212 &4931467429335182293
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253776643789109897}
+  m_GameObject: {fileID: 4931467429335182294}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &253776643789109899
+--- !u!58 &4931467429335182292
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253776643789109897}
+  m_GameObject: {fileID: 4931467429335182294}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: afd03398968dff846ac1e8688325f96d, type: 2}
@@ -102,13 +102,13 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.28880462
---- !u!251 &253776643789109896
+--- !u!251 &4931467429335182295
 PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253776643789109897}
+  m_GameObject: {fileID: 4931467429335182294}
   m_Enabled: 1
   m_UseColliderMask: 1
   m_ColliderMask:
@@ -121,7 +121,7 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!1 &767458313512977270
+--- !u!1 &5571797962706981417
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,8 +129,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2996103053419757545}
-  - component: {fileID: 2243142137521705572}
+  - component: {fileID: 7953854086719581878}
+  - component: {fileID: 6400936817755456315}
   m_Layer: 0
   m_Name: WinterMushroomObject
   m_TagString: CollisionTag
@@ -138,29 +138,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2996103053419757545
+--- !u!4 &7953854086719581878
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767458313512977270}
+  m_GameObject: {fileID: 5571797962706981417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 36.048294, y: 3.1872613, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 253776643789109893}
+  - {fileID: 4931467429335182298}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2243142137521705572
+--- !u!114 &6400936817755456315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767458313512977270}
+  m_GameObject: {fileID: 5571797962706981417}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36077205b27d24145acefeb28cbb86fa, type: 3}
