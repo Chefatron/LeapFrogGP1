@@ -10,7 +10,14 @@ public class FrogNoise : MonoBehaviour
     
     void Start()
     {
-        FrogAudioSource = GameObject.Find("FrogAudio").GetComponent<AudioSource>();       
+        try
+        {
+            FrogAudioSource = GameObject.Find("FrogAudio").GetComponent<AudioSource>();
+        }
+        catch
+        {
+
+        }
     }
 
     private void Update()
