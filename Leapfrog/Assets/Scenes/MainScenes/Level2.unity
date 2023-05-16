@@ -821,6 +821,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &337562545 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 296626014695824519, guid: e64cfdf807758a74f95ea749472cc6e8, type: 3}
+  m_PrefabInstance: {fileID: 1525336949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &343381652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,7 +2205,7 @@ PrefabInstance:
     - target: {fileID: 4547681073154181632, guid: 93a000fdc4472c84d8d03d86173cb6e3, type: 3}
       propertyPath: audioPlayer
       value: 
-      objectReference: {fileID: 1525336950}
+      objectReference: {fileID: 337562545}
     - target: {fileID: 4547681073154181639, guid: 93a000fdc4472c84d8d03d86173cb6e3, type: 3}
       propertyPath: m_RootOrder
       value: 11
