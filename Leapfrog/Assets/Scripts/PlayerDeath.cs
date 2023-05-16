@@ -23,6 +23,6 @@ public class PlayerDeath : MonoBehaviour
         }
         PlayerPrefs.SetInt("PreviousLevel", SceneManager.GetActiveScene().buildIndex);
         GameObject.Find("ScoreManager").GetComponent<ScoreManager>().StoreScore();
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 }

@@ -40,6 +40,6 @@ public class GameMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         Paused = false;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
