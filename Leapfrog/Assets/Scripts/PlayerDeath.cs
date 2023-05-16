@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
     private CameraFollow CameraFollowObject;
-    private GameObject Player;
 
     private void Start()
     {
@@ -14,7 +13,6 @@ public class PlayerDeath : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Dead");
         CameraFollowObject.FollowX = false;
         CameraFollowObject.FollowY = false;
         Destroy(GetComponent<Jumping>());
@@ -24,6 +22,7 @@ public class PlayerDeath : MonoBehaviour
             transform.Find("PlayerLight").GetComponent<Light2D>().intensity = 0;
         }
         PlayerPrefs.SetInt("PreviousLevel", SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(4);
+        GameObject.Find("ScoreManager").GetComponent<ScoreManager>().StoreScore();
+        SceneManager.LoadScene(5);
     }
 }
