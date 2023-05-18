@@ -3050,7 +3050,7 @@ PrefabInstance:
       objectReference: {fileID: 1540496036}
     - target: {fileID: 3992657443068304145, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
       propertyPath: FollowDistanceOffset
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8163934482488532119, guid: 250c92d53a8f8844a8e05db026015c60, type: 3}
       propertyPath: m_RootOrder

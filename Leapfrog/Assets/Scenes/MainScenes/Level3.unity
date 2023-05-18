@@ -3085,6 +3085,10 @@ PrefabInstance:
       propertyPath: attackChance
       value: 1001
       objectReference: {fileID: 0}
+    - target: {fileID: 6278509209627431939, guid: f1a083d3f0958e54aa658206c7fcf6db, type: 3}
+      propertyPath: FollowDistanceOffset
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 6280549991831679988, guid: f1a083d3f0958e54aa658206c7fcf6db, type: 3}
       propertyPath: DeathScript
       value: 
