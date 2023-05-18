@@ -70,6 +70,7 @@ public class Tutorial_script : MonoBehaviour
     public void SkipButton()
     {
         Time.timeScale = 1;
+        PlayerPrefs.SetString("TutorialCompleted", "Yes");
         Destroy(GameObject.Find("TutorialText"));
         Destroy(GameObject.Find("SkipButton"));
         PauseButton.SetActive(true);
