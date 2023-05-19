@@ -7,6 +7,9 @@ public class MainMenu : MonoBehaviour
     public GameObject Level1ButonObject;
     public GameObject Level2ButonObject;
     public GameObject Level3ButonObject;
+    public GameObject SettingsPanel;
+
+    private bool SettingsOpen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +18,7 @@ public class MainMenu : MonoBehaviour
         Level1ButonObject.SetActive(false);
         Level2ButonObject.SetActive(false);
         Level3ButonObject.SetActive(false);
+        SettingsPanel.SetActive(false);
     }
 
     public void StartButton()
@@ -28,5 +32,24 @@ public class MainMenu : MonoBehaviour
     public void SelectLevel(int _Selection)
     {
         SceneManager.LoadScene(_Selection);
+    }
+
+    public void SettingsButton()
+    {
+        if(SettingsOpen)
+        {
+            SettingsPanel.SetActive(false);
+            SettingsOpen = false;
+        }
+        else
+        {
+            SettingsPanel.SetActive(true);
+            SettingsOpen = true;
+        }
+    }
+
+    public void ResetTutorialButton()
+    {
+        PlayerPrefs.SetString("TutorialCompleted", "No");
     }
 }

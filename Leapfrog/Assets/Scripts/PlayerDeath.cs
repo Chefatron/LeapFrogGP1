@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
     private CameraFollow CameraFollowObject;
-    private GameObject Player;
 
     private void Start()
     {
@@ -14,15 +13,16 @@ public class PlayerDeath : MonoBehaviour
 
     public void Die()
     {
-        CameraFollowObject.FollowX = false;
-        CameraFollowObject.FollowY = false;
-        Destroy(GetComponent<Jumping>());
-        Destroy(GetComponent<SpriteRenderer>());
-        if (transform.Find("PlayerLight") != null)
-        {
-            transform.Find("PlayerLight").GetComponent<Light2D>().intensity = 0;
-        }
+        //CameraFollowObject.FollowX = false;
+        //CameraFollowObject.FollowY = false;
+        //Destroy(GetComponent<Jumping>());
+        //Destroy(GetComponent<SpriteRenderer>());
+        //if (transform.Find("PlayerLight") != null)
+        //{
+        //    transform.Find("PlayerLight").GetComponent<Light2D>().intensity = 0;
+        //}
         PlayerPrefs.SetInt("PreviousLevel", SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(4);
+        GameObject.Find("ScoreManager").GetComponent<ScoreManager>().StoreScore();
+        SceneManager.LoadScene(5);
     }
 }
