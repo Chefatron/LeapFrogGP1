@@ -2976,6 +2976,10 @@ PrefabInstance:
       propertyPath: deathscript
       value: 
       objectReference: {fileID: 1655700573}
+    - target: {fileID: 6590642442719942317, guid: 430588190bf641d49bda37e848dd8173, type: 3}
+      propertyPath: FollowDistanceOffset
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 6590642442719942318, guid: 430588190bf641d49bda37e848dd8173, type: 3}
       propertyPath: m_RootOrder
       value: 13
