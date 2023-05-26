@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &275429799587733925
+--- !u!1 &2435031587160426752
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3397507452453417755}
-  - component: {fileID: 5410870977158979833}
-  - component: {fileID: 8037871783719081223}
-  - component: {fileID: 6207171087316279401}
-  - component: {fileID: 3406834306278619017}
-  - component: {fileID: 839814386697763714}
-  - component: {fileID: 215310710509335825}
+  - component: {fileID: 2435031587160426755}
+  - component: {fileID: 2435031587160426754}
+  - component: {fileID: 2435031587160426753}
+  - component: {fileID: 5891444713876346985}
+  - component: {fileID: 6974717907761764188}
+  - component: {fileID: 7311961437807315513}
+  - component: {fileID: 724406246922578234}
   m_Layer: 0
-  m_Name: BreakablePlatformSide
+  m_Name: SidePlatform_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3397507452453417755
+--- !u!4 &2435031587160426755
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275429799587733925}
+  m_GameObject: {fileID: 2435031587160426752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.751152, y: -7.1924076, z: 0}
-  m_LocalScale: {x: 6, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7351630994942215037}
+  - {fileID: 1289361479114512609}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5410870977158979833
+--- !u!212 &2435031587160426754
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275429799587733925}
+  m_GameObject: {fileID: 2435031587160426752}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 796803931, guid: b6d65b28018e2bc4e922e87566b43347, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -90,39 +90,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8037871783719081223
+--- !u!61 &2435031587160426753
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275429799587733925}
+  m_GameObject: {fileID: 2435031587160426752}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e43ececdb72d4c24ba4946de62f78393, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.020961285, y: 0.24804378}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.14, y: 1.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.0961447, y: 0.48993826}
   m_EdgeRadius: 0
---- !u!251 &6207171087316279401
+--- !u!251 &5891444713876346985
 PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275429799587733925}
+  m_GameObject: {fileID: 2435031587160426752}
   m_Enabled: 1
   m_UseColliderMask: 1
   m_ColliderMask:
@@ -135,46 +135,47 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &3406834306278619017
+--- !u!114 &6974717907761764188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275429799587733925}
+  m_GameObject: {fileID: 2435031587160426752}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9e411a145deeb54c85f68c4ab345de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyDist: 40
---- !u!114 &839814386697763714
+  DestroyDist: 20
+--- !u!114 &7311961437807315513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275429799587733925}
+  m_GameObject: {fileID: 2435031587160426752}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff66e0ab953b4a469af56aff669a7c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnChance: 2
+  SpawnChance: 3
   Fly: {fileID: 11335969492880210, guid: ff1105c5d48fc0848a4ac79b868b0338, type: 3}
---- !u!114 &215310710509335825
+--- !u!114 &724406246922578234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275429799587733925}
+  m_GameObject: {fileID: 2435031587160426752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 506fb9329b6f0c844a2d0df811ab7b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 36077205b27d24145acefeb28cbb86fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &8534216495001427884
+  AlternateFlip: 0
+--- !u!1 &5203730956502862315
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,7 +183,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7351630994942215037}
+  - component: {fileID: 1289361479114512609}
   m_Layer: 0
   m_Name: FlySpawnPoint
   m_TagString: Untagged
@@ -190,18 +191,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7351630994942215037
+--- !u!4 &1289361479114512609
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8534216495001427884}
+  m_GameObject: {fileID: 5203730956502862315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3397507452453417755}
+  m_Father: {fileID: 2435031587160426755}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

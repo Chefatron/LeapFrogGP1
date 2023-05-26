@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Player.position.y > Walls[Walls.Count - 1].transform.position.y)
+        if(Player.position.y > (Walls[Walls.Count - 1].transform.position.y) - 10)
         {
             Walls[Walls.Count - 1].GetComponent<WallSpawn>().Spawn();
         }

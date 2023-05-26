@@ -1,15 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformBreak : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject ParticleSystem;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,7 +10,7 @@ public class PlatformBreak : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)
             {
-                Debug.Log("breakable platform collided");
+                Instantiate(ParticleSystem, transform.position, Quaternion.identity);   
                 Destroy(gameObject, 1);
             }
         }
